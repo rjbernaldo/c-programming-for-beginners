@@ -8,14 +8,18 @@ int main(int argc, char **argv) {
 
   printf("Enter your age: ");
   gets(agestring);
-  age = atoi(agestring);
-  if (age > 45) {
-    bonus = 1000;
-  } else {
-    bonus = 500;
-  }
 
-  printf("Your age is %d, so your bonus is %d.\n", age, bonus);
+  age = atoi(agestring);
+  if (age == 0) {
+    printf("You've entered an invalid age, so your bonus cannot be calculated.");
+  } else {
+    if (age > 45) {
+      bonus = 1000;
+    } else {
+      bonus = 500;
+    }
+    printf("Your age is %d, so your bonus is %d.\n", age, bonus);
+  }
 
   return 0;
 }
