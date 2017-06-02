@@ -1,8 +1,23 @@
 #include <stdio.h>
+#include <string.h>
 
 void flush_input() {
   int ch;
   while ((ch = getchar()) != '\n' && ch != EOF);
+}
+
+int read_line(char s[], int maxlen) {
+  int len_s;
+
+  fgets (s, maxlen, stdin);
+  len_s = strlen(s);
+  if (s[len_s - 1] == '\n') {
+    s[len_s - 1] = '\0';
+    len_s -= 1;
+  }
+
+  flush_input();
+  return len_s;
 }
 
 void get_input_with_fgets() {
@@ -10,12 +25,10 @@ void get_input_with_fgets() {
   char lastname[5];
 
   printf("Enter your firstname: ");
-  fgets(firstname, 5, stdin);
-  flush_input();
+  read_line(firstname, 5);
 
   printf("Enter your lastname: ");
-  fgets(lastname, 5, stdin);
-  flush_input();
+  read_line(lastname, 5);
 
   printf("Hello, %s, %s\n", firstname, lastname);
 }
