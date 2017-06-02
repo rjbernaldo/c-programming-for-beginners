@@ -1,23 +1,26 @@
 #include <stdio.h>
 #include <string.h>
 
-void flush_input() {
-  int ch;
-  while ((ch = getchar()) != '\n' && ch != EOF);
-}
-
 int read_line(char s[], int maxlen) {
-  int len_s;
+  char ch;
+  int i;
+  int chars_remain;
 
-  fgets (s, maxlen, stdin);
-  len_s = strlen(s);
-  if (s[len_s - 1] == '\n') {
-    s[len_s - 1] = '\0';
-    len_s -= 1;
+  i = 0;
+  chars_remain = 1;
+
+  while (chars_remain) {
+    ch = getchar();
+    if ((ch == '\n') || (ch == EOF)) {
+      chars_remain = 0;
+    } else if (i < maxlen - 1) {
+      s[i] = ch;
+      i++;
+    }
   }
 
-  flush_input();
-  return len_s;
+  s[i] = '\0';
+  return i;
 }
 
 void get_input_with_fgets() {
