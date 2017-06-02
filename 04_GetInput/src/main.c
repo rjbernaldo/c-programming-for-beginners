@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int read_line(char s[], int maxlen) {
   char ch;
