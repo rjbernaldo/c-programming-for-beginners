@@ -15,5 +15,9 @@ int main(int argc, char **argv) {
   str2 = &str1;
   printf("%x %x %s\n", &str2, str2, str2);
 
+  // NOTE: An array name variable already points to an address
+  str2 = str1;
+  printf("%x %x %s\n", &str2, str2, str2);
+
   return 0;
 }
