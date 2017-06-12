@@ -17,6 +17,8 @@ int main() {
   printf("%d %s\n", str3, str3);
 
   printf("%d, %d, %d, %d, %d\n", &str3[0], &str3[1], &str3[2], &str3[3], &str3[4], &str3[5]);
+  // NOTE: Adding 1 to an array name gives you the address of the next item in the array
+  // because the array name IS the address of the array
   printf("%d, %d, %d, %d, %d\n", str3, str3+1, str3+2, str3+3, str3+4, str3+5);
 
   str2 = "Goodbye";
