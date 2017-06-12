@@ -6,7 +6,7 @@ char greeting[MAXSTRLEN];
 
 char * string_function_dynamic(char *astring) {
   char *s;
-  s = malloc(MAXSTRLEN);
+  s = malloc(MAXSTRLEN); // NOTE: allocate space for the string on a global memory area called the heap
   s[0] = 0; // initialize buffer created by malloc
   strcat(s, "hello ");
   strcat(s, astring);
