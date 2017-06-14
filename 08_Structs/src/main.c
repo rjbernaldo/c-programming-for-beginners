@@ -4,15 +4,16 @@
 #define NUMBER_OF_CDS 1
 
 typedef struct cd CD;
+typedef char Str50[50];
 
 struct cd {
-  char name[50];
-  char artist[50];
+  Str50 name[50];
+  Str50 artist[50];
   int trackcount;
   int rating;
 };
 
-struct cd cd_collection[NUMBER_OF_CDS];
+CD cd_collection[NUMBER_OF_CDS];
 
 void create_cd_collection() {
   strcpy(cd_collection[0].name, "Name");
