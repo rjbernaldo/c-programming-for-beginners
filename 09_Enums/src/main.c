@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 enum suits {
-  Hearts, Diamonds, Clubs, Spades
+  Hearts, Diamonds, Clubs, Spades, Lol = 500
 };
 
 void showcard(enum suits card) {
@@ -14,6 +14,6 @@ void showcard(enum suits card) {
 
 int main(int argc, char **argv) {
   enum suits playingcard;
-  playingcard = Diamonds;
+  playingcard = Lol;
   showcard(playingcard);
 }
