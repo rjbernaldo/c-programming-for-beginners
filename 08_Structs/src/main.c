@@ -3,6 +3,8 @@
 
 #define NUMBER_OF_CDS 1
 
+typedef struct cd CD;
+
 struct cd {
   char name[50];
   char artist[50];
@@ -21,7 +23,7 @@ void create_cd_collection() {
 
 void display_cd_collection() {
   int i;
-  struct cd thiscd;
+  CD thiscd;
   for (i = 0; i < NUMBER_OF_CDS; i++) {
     thiscd = cd_collection[i];
     printf("CD #%d: %s - %s - %d - %d", i, thiscd.name, thiscd.artist, thiscd.trackcount, thiscd.rating);
