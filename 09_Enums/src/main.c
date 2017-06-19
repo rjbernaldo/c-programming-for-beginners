@@ -14,6 +14,6 @@ void showcard(enum suits card) {
 
 int main(int argc, char **argv) {
   enum suits playingcard;
-  playingcard = Lol;
+  playingcard = 1000;
   showcard(playingcard);
 }
