@@ -2,5 +2,5 @@
 #include "helloworld.h"
 
 int test(char testchararray[]) {
-  puts strlen(testchararray)
+  return strlen(testchararray);
 }

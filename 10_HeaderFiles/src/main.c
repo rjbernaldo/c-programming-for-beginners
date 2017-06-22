@@ -2,5 +2,6 @@
 #include "helloworld.h"
 
 int main(int argc, char **argv) {
-  puts(test("test"));
+  int result = test("test");
+  printf("%d\n", result);
 }
