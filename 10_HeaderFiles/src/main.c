@@ -2,6 +2,7 @@
 #include "helloworld.h"
 
 int main(int argc, char **argv) {
-  int result = test("test");
-  printf("%d\n", result);
+  char str[] = "test";
+  int result = test(str);
+  printf("%s: %d\n", str, result);
 }
